@@ -2,7 +2,11 @@
 
 A powerful web application that transcribes, summarizes, and translates video and audio content using advanced AI technology.
 
-![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/Red%20and%20Black%20Minimal%20Circular%20Medical%20Pharmacy%20Logo%20(1).png)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/logo.png)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/website%201%20(1)_upscayl_3x_digital-art-4x.png)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/fetures.png)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/how%20to.png)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/sites.png)
 
 ## Pages & Features
 
