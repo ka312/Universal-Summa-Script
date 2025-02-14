@@ -2,7 +2,7 @@
 
 A powerful web application that transcribes, summarizes, and translates video and audio content using advanced AI technology.
 
-![Landing Page](placeholder_landing.jpg)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/Red%20and%20Black%20Minimal%20Circular%20Medical%20Pharmacy%20Logo%20(1).png)
 
 ## Pages & Features
 
@@ -162,6 +162,3 @@ PROJECT/
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
