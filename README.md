@@ -25,7 +25,7 @@ A powerful web application that transcribes, summarizes, and translates video an
 - Highlights key concepts and learning points
 - Perfect for study materials and note-taking
 
-![EDU Videos](placeholder_edu.jpg)
+![EDU Videos](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/EDU.png)
 
 ### Podcast Page
 - Transcribes podcast episodes with high accuracy
@@ -34,7 +34,7 @@ A powerful web application that transcribes, summarizes, and translates video an
 - Extracts key insights and discussion points
 - Supports various podcast platforms
 
-![Podcast](placeholder_podcast.jpg)
+![Podcast](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/podcast.png)
 
 ### Meeting Page
 - Converts meeting recordings into organized text
@@ -43,7 +43,7 @@ A powerful web application that transcribes, summarizes, and translates video an
 - Perfect for meeting minutes and documentation
 - Maintains conversation context and flow
 
-![Meeting](placeholder_meeting.jpg)
+![Meeting](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/meeting.png)
 
 ### Entertainment Page
 - Transcribes movies, shows, and entertainment content
@@ -52,7 +52,7 @@ A powerful web application that transcribes, summarizes, and translates video an
 - Perfect for content accessibility
 - Maintains timing accuracy
 
-![Entertainment](placeholder_entertainment.jpg)
+![Entertainment](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/entertainment.png)
 
 ### Supported Websites Page
 - Lists all compatible platforms and websites
@@ -61,7 +61,7 @@ A powerful web application that transcribes, summarizes, and translates video an
 - Updated regularly with new platform support
 - User-friendly interface for quick reference
 
-![Supported Websites](placeholder_supported.jpg)
+![Supported Websites](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/supported%20websites.png)
 
 ## Technical Implementation
 
