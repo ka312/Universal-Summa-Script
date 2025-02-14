@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mb-4">Podcast Processor</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form id="podcastForm">
+                        <div class="mb-3">
+                            <label for="videoUrl" class="form-label">Podcast URL</label>
+                            <input type="url" class="form-control" id="videoUrl" name="url" required 
+                                   placeholder="Enter podcast URL (YouTube, Spotify, etc.)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="translation" class="form-label">Translate with AI</label>
+                            <select class="form-select" id="translation" name="translation">
+                                <option value="none">None</option>
+                                <option value="english">English</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="startBtn">Start Processing</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="processingStatus" class="alert alert-info d-none">
+                Processing podcast... Please wait.
+            </div>
+
+            <div id="results" class="d-none">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">Subtitles</h5>
+                                <button class="btn btn-sm btn-secondary float-end" id="downloadSrt">Download SRT</button>
+                            </div>
+                            <div class="card-body">
+                                <pre id="subtitles" class="subtitles-container"></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">Key Takeaways</h5>
+                                <button class="btn btn-sm btn-secondary float-end" id="downloadTakeaways">Download Takeaways</button>
+                            </div>
+                            <div class="card-body">
+                                <div id="takeaways" class="takeaways-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorMessage" class="alert alert-danger d-none"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('podcastForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const processingStatus = document.getElementById('processingStatus');
+    const results = document.getElementById('results');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    // Show processing status
+    processingStatus.classList.remove('d-none');
+    results.classList.add('d-none');
+    errorMessage.classList.add('d-none');
+    
+    try {
+        const formData = new FormData(form);
+        formData.append('type', 'podcast');
+        
+        const response = await fetch('/process-video', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            // Update results
+            document.getElementById('subtitles').textContent = data.subtitles;
+            document.getElementById('takeaways').innerHTML = data.summary;
+            
+            // Show results
+            results.classList.remove('d-none');
+        } else {
+            throw new Error(data.error || 'Failed to process podcast');
+        }
+    } catch (error) {
+        errorMessage.textContent = error.message;
+        errorMessage.classList.remove('d-none');
+    } finally {
+        processingStatus.classList.add('d-none');
+    }
+});
+
+// Download handlers
+document.getElementById('downloadSrt').addEventListener('click', function() {
+    const subtitles = document.getElementById('subtitles').textContent;
+    downloadFile(subtitles, 'subtitles.srt', 'text/plain');
+});
+
+document.getElementById('downloadTakeaways').addEventListener('click', function() {
+    const takeaways = document.getElementById('takeaways').textContent;
+    downloadFile(takeaways, 'takeaways.txt', 'text/plain');
+});
+
+function downloadFile(content, filename, contentType) {
+    const blob = new Blob([content], { type: contentType });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    window.URL.revokeObjectURL(url);
+}
+</script>
+
+<style>
+.subtitles-container {
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+.takeaways-container {
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+</style>
+{% endblock %}
