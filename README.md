@@ -4,7 +4,6 @@ A powerful web application that transcribes, summarizes, and translates video an
 
 ![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/logo.png)
 ![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/website%201%20(1)_upscayl_3x_digital-art-4x.png)
-![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/fetures.png)
 ![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/how%20to.png)
 ![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/sites.png)
 
@@ -17,7 +16,7 @@ A powerful web application that transcribes, summarizes, and translates video an
 - Step-by-step guide on how to use the application
 - Overview of key features and supported platforms
 
-![Landing Page Features](placeholder_landing_features.jpg)
+![Landing Page](https://raw.githubusercontent.com/ka312/Universal-Summa-Script/refs/heads/main/images/fetures.png)
 
 ### EDU-Videos Page
 - Specialized for educational content transcription
