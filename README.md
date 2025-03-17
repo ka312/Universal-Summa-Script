@@ -161,7 +161,5 @@ PROJECT/
 - Enhanced summary features
 - More language support
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
 
